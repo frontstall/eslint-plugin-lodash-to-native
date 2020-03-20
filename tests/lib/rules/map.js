@@ -30,19 +30,19 @@ tester.run('map', rule, {
   invalid: [
     {
       code: 'const x = _.map(array, cb)',
-      errors: [{ message: 'use native Array.prototype.map' }],
+      errors: [{ message: 'Use build-in Array.prototype.map' }],
     },
     {
       code: 'function foo () { _.map(array, cb); }',
-      errors: [{ message: 'use native Array.prototype.map' }],
+      errors: [{ message: 'Use build-in Array.prototype.map' }],
     },
     {
       code: 'if (a > b) { x = array.map(cb); } else { x = _.map(array, cb); }',
-      errors: [{ message: 'use native Array.prototype.map' }],
+      errors: [{ message: 'Use build-in Array.prototype.map' }],
     },
     {
       code: 'const x = _.map([{ a: 1 }], cb)',
-      errors: [{ message: 'use native Array.prototype.map' }],
+      errors: [{ message: 'Use build-in Array.prototype.map' }],
     },
   ],
 });
